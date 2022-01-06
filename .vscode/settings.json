@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "hamburgueria-db",
+            "database": "${workspaceFolder:hamburgueria-marvelicious}/hamburgueria-marvelicious-api/src/database/hamburgueria-db"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
