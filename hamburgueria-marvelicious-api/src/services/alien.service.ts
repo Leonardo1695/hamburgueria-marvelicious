@@ -15,6 +15,11 @@ export class AlienService {
     return data;
   }
 
+  async getAlien(id: number) {
+    const data = await this.repository.findOne({ where: { id } });
+    return data;
+  }
+
   async createAlien(alien: Alien) {
     if (!alien) {
       throw new BadRequestException('alien to persist not send');

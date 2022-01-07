@@ -19,6 +19,11 @@ export class AlienController {
     return this.alienService.getAliens();
   }
 
+  @Get(':id')
+  getAlien(@Param('id') id: number): Promise<Alien> {
+    return this.alienService.getAlien(id);
+  }
+
   @Post()
   createAlien(@Body() alien: Alien): Promise<Alien> {
     return this.alienService.createAlien(alien);
