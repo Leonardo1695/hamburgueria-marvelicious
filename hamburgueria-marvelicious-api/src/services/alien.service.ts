@@ -38,13 +38,11 @@ export class AlienService {
 
     const alienSaved = await this.repository.findOne({ where: { id } });
 
-    console.log(alienSaved);
-
     if (!alienSaved) {
       throw new NotFoundException("alien doesn't exists");
     }
 
-    const alienUpdated = await this.repository.save(alienSaved);
+    const alienUpdated = await this.repository.save(alien);
 
     return alienUpdated;
   }
