@@ -1,18 +1,18 @@
-import { AlienController } from './controllers/alien.controller';
+import { HamburguerController } from './controllers/hamburguerController'
 import { Module } from '@nestjs/common';
 import { AppController } from './controllers/app.controller';
 import { AppService } from './services/app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { getOrmConfig } from './config';
-import { AlienService } from './services/alien.service';
-import { AlienRepository } from './repositories/alien.repository';
+import { HamburguerService } from './services/hamburguerService';
+import { HamburguerRepository } from './repositories/hamburguerRepository';
 
 @Module({
   imports: [
     TypeOrmModule.forRoot(getOrmConfig()),
-    TypeOrmModule.forFeature([AlienRepository]),
+    TypeOrmModule.forFeature([HamburguerRepository]),
   ],
-  controllers: [AppController, AlienController],
-  providers: [AppService, AlienService],
+  controllers: [AppController, HamburguerController],
+  providers: [AppService, HamburguerService],
 })
 export class AppModule {}
